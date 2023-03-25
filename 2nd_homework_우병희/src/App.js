@@ -16,6 +16,9 @@ function App() {
     <Routes>
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
+      </Route>
+      {/* Route의 header안에 layout되는 점을 home에 있는 것만 하게 한다*/}
+      {/*안에 /about, /profile은 클릭 시에 header안에서가 아닌 새로 나오게 한다 */}
       {/*index = path='/' outlet안에서 첫번째 화면으로 한다
       index대신에 path='/'를 쓰면 충돌 
       /가 무조건 우선이다. 
@@ -24,10 +27,12 @@ function App() {
       */}
       <Route path="/about" element={<About />} />
       <Route path="/profiles/:username" element={<Profile />} />
-    </Route>
-    <Route path="/articles" element={<Articles />}>
+      
+      {/*
+   <Route path="/articles" element={<Articles />}>
       <Route path=":id" element={<Article />} />
     </Route>
+    */}
 
     <Route path="*" element={<NotFound />} />
     {/* 와일드 카드 *가 의미하는 것은 이곳에 어떤 텍스트가 들어가도 상관 없다는 뜻이며
