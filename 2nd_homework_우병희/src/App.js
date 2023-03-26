@@ -5,6 +5,7 @@ import Profile from './pages/profile';
 import Article from './pages/Article';
 import Articles from './pages/Articles';
 import NotFound from './pages/NotFound';
+import Aboutmyself from './pages/Aboutmyself';
 
 
 import Layout from './Layout';
@@ -25,14 +26,19 @@ function App() {
       path='/'와 index 바꾸면 path='/'만 나옴
       로그인 됫을때 안됬을 떄 
       */}
-      <Route path="/about" element={<About />} />
+      <Route path="/about" element={<About />} ></Route>
+      <Route path="/aboutmyself/:nname" element={<Aboutmyself/>} />
+
       <Route path="/profiles/:username" element={<Profile />} />
+      {/* username이라는 parameter 값을 가지고 있는 profile이라는 경로로
+      가면 Profile component를 보여준다. */}
+     
       
-      {/*
+      
    <Route path="/articles" element={<Articles />}>
       <Route path=":id" element={<Article />} />
     </Route>
-    */}
+   
 
     <Route path="*" element={<NotFound />} />
     {/* 와일드 카드 *가 의미하는 것은 이곳에 어떤 텍스트가 들어가도 상관 없다는 뜻이며

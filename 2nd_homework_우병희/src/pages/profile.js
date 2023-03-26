@@ -28,11 +28,15 @@ const data = {
 // 프로필 정보를 표시하는 컴포넌트입니다.
 function Profile() {
 
+  
+
 
   const picture={
     width:300 ,
     height:300
   }
+
+
   // "useParams" 훅을 사용하여 URL에서 전달된 username 파라미터를 가져옵니다.
   // 
   const params = useParams();
@@ -62,17 +66,24 @@ function Profile() {
 
   // 사용자 정보가 존재하면 해당 정보를 화면에 표시하고, 그렇지 않으면 존재하지 않는 프로필임을 알리는 메시지를 표시합니다.
   return (
-    <div>
+    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
       <h1>사용자 프로필</h1>
       {/*profile안에 kyj, pjk라는 username의 key값을 전달해서 있냐 없냐*/}
       {profile ? (
-        <div>
-          <h2>{profile.name}</h2>
-          <p>{profile.description}</p>
-          <p>{profile.age}</p>
+        <div> 
+          <h2>이름:  &nbsp;&nbsp;{profile.name}</h2>
+          <h2 style={{display:'inline'}}>상세정보:</h2>
+          <p style={{display:'inline'}}> &nbsp;{profile.description}</p>
+         
+          <p>
+          <h2 style={{display:'inline'}}>나이:</h2>
+          <p style={{display:'inline'}}> &nbsp;{profile.age}</p>
+          </p>
+         
           <p>{profile.military}</p>
           <p>{profile.major}</p>
           <img style={picture} src={profile.picture} />
+         
         </div>
       ) : (
         <p>존재하지 않는 프로필입니다.</p>
