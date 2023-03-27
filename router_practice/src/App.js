@@ -4,6 +4,8 @@ import About from "./pages/About";
 import Name from "./pages/name";
 import Profile from "./pages/profile";
 import Names from "./pages/names";
+import Lankprofile from "./pages/lankprofile";
+import NotFound from "./pages/Notfound";
 
 
 function App(){
@@ -11,12 +13,17 @@ function App(){
     <Routes>
       <Route path='/' element={<Home/>}></Route>
       <Route path='/about' element={<About/>}></Route>
-      <Route path='/profile/:username' element={<Profile/>}></Route>
+
+      <Route path="/lankprofile" element={<Lankprofile/>}>
+      <Route path=':id/:username' element={<Profile/>}/>
+      </Route>
+      <Route path='/profile:user' element={<Profile/>}></Route>
 
       <Route path='/name' element={<Name/>}>
       <Route path=':id/:userr' element={<Names/>}/>
 
       </Route>
+      <Route path= "*" element={<NotFound/>}></Route>
 
     </Routes>
   )
