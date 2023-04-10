@@ -5,9 +5,7 @@ const People= styled(Link)`
 
 
 
-& :hover { color:  ${props => props.change || 'skyblue'};
-border-bottom: ${props => (props.value === 'people' ? '4px solid blue' : '')}
-}
+
 
 `
 

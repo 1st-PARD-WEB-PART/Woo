@@ -4,17 +4,18 @@ import {Link} from 'react-router-dom'
 
 
 const Homepage= styled(Link)`
-widht:100.7px;
 
-
-& :hover {
+/*
+& :hover{
    
     color:  ${props => props.change || 'skyblue'};
-    border-bottom: ${props => (props.value === 'homepage' ? '4px solid blue' : '')}
+   // border-bottom : ${props => (props.value === 'homepage' ? '2px solid blue' : '')}
 }
+*/
 
 
-;
+
+
 `
 
 export default Homepage;
