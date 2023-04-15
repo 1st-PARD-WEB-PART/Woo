@@ -1,6 +1,8 @@
 import {useParams} from 'react-router-dom'
 import Screen from './Screen';
 import CenterText from './centerText';
+import { Div } from './Call';
+
 const data={
     homepage:{
         name:'Homepage',
@@ -22,7 +24,7 @@ const Contents=()=>{
         <div>
         
             <CenterText>{contents.name}</CenterText>
-
+            
 
         
         </div>

@@ -1,8 +1,16 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import {Link} from 'react-router-dom'
 
 
+const grow= keyframes`
+  from {
+    transform: scale(1);
+  }
 
+  to {
+    transform: scale(5);
+  }
+`
 const Homepage= styled(Link)`
 
 /*
@@ -14,7 +22,18 @@ const Homepage= styled(Link)`
 */
 
 
+cursor:${props=>props.disabled ? 'not-allowed':'pointer'};
+&:focus{
+    outline:2px solid blue;
+}
 
+animation: ${grow} 0.2s ease-in-out;
+&:hover{
+    animation: ${grow} 0.2s ease-in-out;
+   transform: scale(1.5)
+   ;
+
+}
 
 `
 

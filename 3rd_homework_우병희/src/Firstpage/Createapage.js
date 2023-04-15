@@ -5,7 +5,7 @@ const CrePage= styled.span`
 position: absolute;
 width: 482px;
 height: 38px;
-left: 769px;
+right:13%;
 top: 634px;
 
 font-family: 'Roboto';

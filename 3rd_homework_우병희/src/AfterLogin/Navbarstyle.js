@@ -3,11 +3,11 @@ import styled from 'styled-components';
 const Navbarleft=  styled.form`
     display:flex;
     height:40px;
-    width:10%;
+    margin-left:0.7%;
     flex-direction: row;
     align-items: center;
     
-    gap:10px;
+    gap:12px;
    
     `
 
@@ -15,13 +15,14 @@ const Navbarleft=  styled.form`
 
     position: absolute;
     display:flex;
-    width:50%;
+ 
+    
     height:40px;
     flex-direction: row;
     align-items: center;
-    gap:90px;
+    gap:60px;
     
-    left: 38.81%;
+    left: 40.81%;
 
 
     `
@@ -30,20 +31,26 @@ const Navbarleft=  styled.form`
 
     position: absolute;
     display:flex;
-    width:40%;
+    
     height:40px;
     flex-direction: row;
     align-items: center;
-    gap:15px;
+    gap:12px;
     
-    left: 92%;
+    margin-left: 91.7%;
+
+   
+
+
+
+
 
 
     `
 const Navbarr=styled.div`
 
-width: 100%;
-height: 40%;
+width:99vw;
+height: 4vh;
 display:flex;
 flex-direction:column;
  

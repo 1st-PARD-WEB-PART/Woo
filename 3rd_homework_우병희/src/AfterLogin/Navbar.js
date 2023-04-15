@@ -12,6 +12,8 @@ import {TiMessages} from "react-icons/ti"
 import {FiPhoneCall} from "react-icons/fi";
 import {BsFacebook} from "react-icons/bs";
 import {Navbarr,Navbarleft,Navbarmiddle,Navbarright} from "./Navbarstyle"
+import "./Placehorder.css"
+import {Call, Faceboook, Message} from './Call';
 
 
 
@@ -25,9 +27,11 @@ function Navvbar(props){
 
 const IconWrapper = styled.span`
    // 아이콘의 너비를 설정
+      
    width: 100px;
+   
    color:#717171;
-   .icon {
+   .iccon {
     transition: border-bottom 0.3s ease ;
    }
   
@@ -60,6 +64,7 @@ const handleClick=(icon)=>{
 }
 const [iinformation,setinformation] = useState('')
 return (
+    // maring,border,width등 전체 width에 방해되는 속성있으면 width가 초과되어 나타남
     <Navbarr> 
 
         <Navbarleft onSubmit={(e)=>{
@@ -78,12 +83,12 @@ return (
      ></Search>
 
 
-     <input type='submit' placeholder='검색'></input>
+     <input  type='submit' placeholder='검색'></input>
      
      </Navbarleft>
 
      <Navbarmiddle>
-            <Homepage to='/content/1/homepage'  
+            <Homepage to='/content/homepage'  
             
             value='homepage'
             onClick={() => handleClick('homepage')
@@ -96,7 +101,7 @@ return (
                 ><AiFillHome
             size={22}
             
-            className={ `icon ${currentTap === 'homepage'?'active':''}`}
+            className={ `iccon ${currentTap === 'homepage'?'active':''}`}
             />
             </IconWrapper>
             </Homepage>
@@ -106,7 +111,9 @@ return (
 
 
             
-           <People to='/content/2/people'
+           <People 
+            
+           to='/content/people'
           
           value='people'
           onClick={() => handleClick('people')}
@@ -117,13 +124,13 @@ return (
             <IoIosPeople
            size={22}
          
-           className={ `icon ${currentTap=== 'people'?'active':''}`}
+           className={ `iccon ${currentTap=== 'people'?'active':''}`}
            />
            </IconWrapper>
            </People>
            
 
-          <Game to='/content/3/game'
+          <Game to='/content/game'
           
          value='game'
          onClick={() => handleClick('game')}
@@ -134,7 +141,7 @@ return (
             <CgGames
           size={22}
           
-          className={ `icon ${currentTap === 'game'?'active':''}`}
+          className={ `iccon ${currentTap === 'game'?'active':''}`}
           />
           </IconWrapper>
           </Game>
@@ -142,11 +149,19 @@ return (
            </Navbarmiddle>
 
            <Navbarright>
-            <TiMessages  style={{color:'blue'}} size={22}/>
-            <FiPhoneCall style={{color:'blue'}} size={22}/>
-            <BsFacebook style={{color:'blue'}} size={22}/>
-            
 
+            <Message>
+         <TiMessages  style={{color:'blue'}} size={22}/>
+                            </Message>
+
+            <Call> <FiPhoneCall style={{color:'blue'}} size={22}/>
+            </Call>
+            
+            <Faceboook>           
+                <BsFacebook style={{color:'blue'}} size={22}/>
+            
+            </Faceboook>
+ 
            </Navbarright>
 
 
